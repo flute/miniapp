@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="containers">
+	<view>{{contId}}</view>
+</view>
+
+
+

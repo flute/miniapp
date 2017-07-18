@@ -1,0 +1,36 @@
+{
+	"pages":[
+		"pages/video/index",
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/video_detail/index"
+	],
+	"window":{
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#000",
+		"navigationBarTitleText": "视频",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"selectedColor": "#fff",
+		"color": "#8a8a8a",
+		"backgroundColor": "rgba(0, 0, 0, 1)",
+		"borderStyle": "white",
+		"list": [{
+			"pagePath": "pages/video/index",
+			"text": "视频",
+			"iconPath": "public/img/video.png",
+			"selectedIconPath": "public/img/video-active.png"
+		},{
+			"pagePath": "pages/index/index",
+			"text": "段子",
+			"iconPath": "public/img/duanzi.png",
+			"selectedIconPath": "public/img/duanzi-active.png"
+		},{
+			"pagePath": "pages/logs/logs",
+			"text": "看图",
+			"iconPath": "public/img/img.png",
+			"selectedIconPath": "public/img/img-active.png"
+		}]
+	}
+}
