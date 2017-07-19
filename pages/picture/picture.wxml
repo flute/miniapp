@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="containers">
 	<scroll-view class="video-lists" scroll-y>
-	    <view class="video-item" wx:for="{{videos}}" bindtap="showVideoDetail" data-contId="{{item.contId}}">
+	    <view class="video-item" wx:for="{{videos}}" wx:key="{{item.contId}}" bindtap="showVideoDetail" data-contId="{{item.contId}}">
 	    	<text class="video-title">{{item.name}}</text>
 	    	<image style="width: 100%; height: 150px; background-color: #eeeeee;" mode="aspectFill" src="{{item.pic}}"></image>
 	    	<view class="video-cover"></view>
