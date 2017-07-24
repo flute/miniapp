@@ -32,6 +32,7 @@ Page({
 				videoArr = videoArr.concat(datas[i].contList)
 			}
 		}
+		console.log(videoArr)
 		this.setData({
 			videos: videoArr
 		})

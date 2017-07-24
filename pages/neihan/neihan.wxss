@@ -1,5 +1,6 @@
 /**video.wxss**/
 .containers{
+	position: relative;
 	height: 100vh;
 	background-color: #f8f8f9;
 }
@@ -72,6 +73,7 @@
 }
 .video-container{
 	position: relative;
+	display:flex;
 }
 .video-container .img-cover{
 	position: absolute;
@@ -94,4 +96,49 @@
 	margin: 1%;
 	display: inline-block;
 	float: left;
+}
+.fullScreen{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.largeImg{
+	width: 100%;
+	height: 100%;
+}
+.video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+.img{
+	margin: 0 auto;
+}
+.types{
+	display: flex;
+	height: 40px;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .65);
+	border-top:1px solid #999;
+}
+.type-item{
+	flex:1;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	color: #ccc
+}
+.type-item.active{
+	background-color: #000;
+	color: #fff
 }

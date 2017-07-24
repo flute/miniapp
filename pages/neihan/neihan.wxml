@@ -1,7 +1,11 @@
 <!--index.wxml-->
 <view class="containers">
-	<scroll-view class="neihan-lists" scroll-y>
-	    <view class="neihan-item" wx:for="{{neihan}}" wx:key="{{item.group.id}}" bindtap="showVideoDetail" data-contId="{{item.group.id}}">
+	<view class="types">
+		<view bindtap="changeType" data-type="duanzi" class="type-item {{type=='duanzi'?'active':''}}">段子</view>
+		<view bindtap="changeType" data-type="tupian" class="type-item {{type=='tupian'?'active':''}}">图片</view>
+	</view>
+	<scroll-view class="neihan-lists" scroll-y="true" bindscrolltolower="scrollBottom" lower-threshold="100">
+	    <view class="neihan-item" wx:for="{{neihan}}" wx:key="{{item.group.id}}">
 			
 			<view class="neihan-user">
 				<view class="neihan-userinfo">
@@ -21,20 +25,22 @@
 	    	
     		<!-- gif/图片 -->
     		<block wx:if="{{ item.group.media_type===1 || item.group.media_type===2 }}">
-    			<image mode="aspectFit" src="{{imgUrl+item.group.large_image.uri}}"></image>
+    			<image class="img" mode="aspectFit" src="{{imgUrl+item.group.large_image.uri}}" 
+    			bindtap="showLargeImage" data-imgurl="{{imgUrl+item.group.large_image.uri}}"></image>
     		</block>
     		<view wx:if="{{ item.group.media_type===4 }}">
-    			<image class="image-item" wx:for="{{item.group.large_image_list}}" mode="aspectFit" src="{{item.url}}"></image>
+    			<image class="image-item" wx:for="{{item.group.large_image_list}}" wx:key="{{item.url}}" mode="aspectFit" src="{{item.url}}" bindtap="showLargeImage" data-imgurl="{{item.url}}"></image>
     		</view>
-    		<block wx:if="{{ item.group.media_type===3 }}">
-    			<view class="video-container">
+    		<!-- <block wx:if="{{ item.group.media_type===3 }}">
+    			<view class="video-container" bindtap="showVideo" data-videourl="{{item.groupmp4_url}}">
+    				
     				<image class="video-cover" src="{{imgUrl+item.group.large_cover.uri}}" mode="aspectFill"></image>
     				<view class="img-cover">
     					<image src="/public/img/icon-play.png"></image>
     				</view>	
     			</view>
-    		</block>
-			<view class="neihan-option">
+    		</block> -->
+			<!-- <view class="neihan-option">
 				<view class="option-item">
 					<image src="/public/img/icon-good.png"></image>
 					{{item.group.favorite_count}}
@@ -47,9 +53,12 @@
 					<image src="/public/img/icon-share.png"></image>
 					{{item.group.share_count}}
 				</view>
-			</view>
+			</view> -->
 	    </view>
 	</scroll-view>
+	<view class="fullScreen" wx:if="{{fullScreen}}">
+		<image class="largeImg" mode="aspectFit" wx:if="{{showUrl}}" src="{{showUrl}}" bindtap="hideFullScreen"></image>
+	</view>
 </view>
 
 
