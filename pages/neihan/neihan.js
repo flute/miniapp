@@ -65,7 +65,7 @@ Page({
 	fetchData: function(){
 		var that = this;
 		wx.request({
-			url: 'https://is.snssdk.com/neihan/stream/mix/v1/',
+			url: 'https://is.snssdk.com/neihan/stream/mix/v2/',
 			data: that.data.data,
 			header: that.data.header,
 			success: function(res) {
@@ -88,13 +88,6 @@ Page({
 		console.log(neihanArr)
 		this.setData({
 			neihan: this.data.neihan.concat(neihanArr)
-		})
-	},
-	showVideoDetail: function(e){
-		console.log(e.currentTarget.dataset)
-		var contId = e.currentTarget.dataset.contid;
-		wx.navigateTo({
-			url: '/pages/video_detail/video_detail?id='+contId
 		})
 	},
 	showLargeImage: function(e){

@@ -1,9 +1,9 @@
 {
 	"pages":[
-		"pages/neihan/neihan",
+		"pages/toutiao/toutiao",
 		"pages/video/video",
+		"pages/neihan/neihan",
 		
-		"pages/picture/picture",
 		"pages/index/index",
 		"pages/logs/logs",
 		"pages/video_detail/video_detail"
@@ -11,7 +11,7 @@
 	"window":{
 		"backgroundTextStyle": "light",
 		"navigationBarBackgroundColor": "#000",
-		"navigationBarTitleText": "视频",
+		"navigationBarTitleText": "兔哈哈",
 		"navigationBarTextStyle": "white"
 	},
 	"tabBar": {
@@ -30,8 +30,8 @@
 			"iconPath": "public/img/duanzi.png",
 			"selectedIconPath": "public/img/duanzi-active.png"
 		},{
-			"pagePath": "pages/picture/picture",
-			"text": "看图",
+			"pagePath": "pages/toutiao/toutiao",
+			"text": "头条",
 			"iconPath": "public/img/img.png",
 			"selectedIconPath": "public/img/img-active.png"
 		}]

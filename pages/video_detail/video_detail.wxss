@@ -1,28 +1,118 @@
 /**video.wxss**/
-.containers{
-	height: 100vh;
+.video{
+	width: 100%;
+	height: 200px;
 }
-.video-item{
-	position:relative;
-	display:flex;
-	border-bottom:1px solid #999;
-}
-.video-title{
-	position:absolute;
-	left:20rpx;
-	bottom:20rpx;
+.video-info{
 	font-size:14px;
-	z-index:5;
-	color:#eee;
+	color: rgba(0, 0, 0, .65);
+	padding:0 20rpx 20rpx 20rpx;
+	margin:10rpx 0;
+	border-bottom:1px solid #e9eaec;
 }
-.video-lists{
-	height: 100%;
+.relate-item{
+	display: flex;
+	margin-bottom:15rpx;
 }
-.video-cover{
+.relateConts{
+	padding: 0 20rpx;
+	border-bottom:1px solid #e9eaec;
+}
+.relate-cover{
+	flex: 1;
+	display: flex;
+	position: relative;
+}
+.relate-img-cover{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .65)
+	background-color: rgba(0,0,0,.25);
+}
+.relate-img-cover text{
+	font-size: 10px;
+	color: #fff;
+	position:absolute;
+	right:5rpx;
+	bottom:5rpx;
+}
+.relate-desc{
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 14px;
+	color: rgba(0, 0, 0, .85);
+	margin-left: 20rpx;
+}
+.relate-img{
+	width: 100%;
+	height: 120rpx;
+}
+.video-info text{
+	font-weight: 500;
+	color: rgba(0, 0, 0, .85);
+}
+.video-info view{
+	margin-top: 10rpx;
+	font-size: 12px;
+}
+.title{
+	font-size: 14px;
+	color: rgba(0,0,0,.85);
+	margin:20rpx 0;
+	font-weight: 500;
+}
+.comments{
+	padding: 20rpx 0;
+}
+.comments .title{
+	padding: 0 20rpx;
+}
+.relate-like{
+	margin-top: 10rpx;
+	display: flex;
+	align-items: center;
+	font-size:12px;
+	color: rgba(0,0,0,.65)
+}
+.relate-like image{
+	width: 30rpx;
+	height: 30rpx;
+	margin-right: 8rpx;
+}
+.comm-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+}
+.comm-user{
+	display: flex;
+	align-items: center;
+}
+.comm-user image{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10rpx;
+}
+.comm-user text{
+	color: #2d8cf0
+}
+.comm-top text{
+	color: rgba(0,0,0,.45);
+}
+.comm-content{
+	font-size: 14px;
+	color: rgba(0,0,0,.65);
+	padding-left:35px;
+	margin-top:5rpx;
+}
+.comm-item{
+	padding: 0 20rpx 20rpx 20rpx;
+	border-bottom: 1px solid #dddee1;
+	margin-bottom:10rpx;
 }

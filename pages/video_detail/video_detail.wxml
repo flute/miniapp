@@ -1,6 +1,44 @@
 <!--index.wxml-->
 <view class="containers">
-	<view>{{contId}}</view>
+	<view v-if="{{video}}">
+		<video class="video" src="{{video && video.content.videos[0].url}}"></video>
+		<view class="video-info">
+			<text>{{video.content.name}}</text>
+			<view>
+				{{video.content.summary}}
+			</view>
+		</view>
+		<view class="relateConts">
+			<view class="title">为你推荐</view>
+			<view class="relate-item" wx:for="{{video.relateConts}}" wx:key="{{item.contId}}" bindtap="showVideoDetail" data-contid="{{item.contId}}">
+				<view class="relate-cover">
+					<image mode="aspectFill" class="relate-img" src="{{item.pic}}"></image>
+					<view class="relate-img-cover">
+						<text>{{item.duration}}</text>
+					</view>
+				</view>
+				<view class="relate-desc">
+					<view>{{item.name}}</view>
+					<view class="relate-like"><image src="/public/img/icon-like.png"></image>{{item.praiseTimes}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="comments">
+			<view class="title">评论</view>
+			<view class="comm-item" wx:for="{{video.postInfo.childList}}" wx:wx:key="{{item.commentId}}">
+				<view class="comm-top">
+					<view class="comm-user">
+						<image src="{{item.userInfo.pic}}"></image>
+						<text>{{item.userInfo.nickname}}</text>
+					</view>
+					<text>{{item.pubTime}}</text>
+				</view>
+				<view class="comm-content">
+					{{item.content}}
+				</view>
+			</view>
+		</view>
+	</view>
 </view>
 
 

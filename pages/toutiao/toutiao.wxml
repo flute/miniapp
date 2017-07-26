@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="containers">
+	<scroll-view class="video-lists" scroll-y>
+	    <view class="video-item" wx:for="{{toutiao}}"  bindtap="showVideoDetail" >
+	    	{{item.read_count}}
+	    </view>
+	</scroll-view>
+</view>
+
+
+

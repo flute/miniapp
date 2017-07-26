@@ -22,11 +22,11 @@
 	height: 240rpx;
 }
 .heihan-title{
-	margin-bottom:10rpx;
+	margin-bottom:15rpx;
 }
 .neihan-title,.neihan-content,.neihan-user{
-	padding: 0 10rpx;
-	margin: 10rpx 0;
+	padding:0 20rpx;
+	margin:15rpx 0;
 }
 .neihan-user{
 	display: flex;
@@ -44,6 +44,7 @@
 	height: 30px;
 	border-radius: 50%;
 	margin-right: 10rpx;
+	background-color:#ccc;
 }
 .neihan-time{
 	font-size: 12px;
