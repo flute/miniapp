@@ -2,6 +2,7 @@
 
 Page({
 	data: {
+		loading: true,
 		videos: []
 	},
 	onLoad: function () {
@@ -34,6 +35,7 @@ Page({
 		}
 		console.log(videoArr)
 		this.setData({
+			loading: false,
 			videos: videoArr
 		})
 	},

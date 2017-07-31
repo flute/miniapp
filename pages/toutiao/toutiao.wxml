@@ -1,10 +1,31 @@
 <!--index.wxml-->
 <view class="containers">
-	<scroll-view class="video-lists" scroll-y>
-	    <view class="video-item" wx:for="{{toutiao}}"  bindtap="showVideoDetail" >
-	    	{{item.read_count}}
+	<scroll-view class="toutiao-lists" scroll-y bindscrolltolower="scrollBottom" lower-threshold="50">
+	    <view class="toutiao-item" wx:for="{{toutiao}}" wx:key="{{index}}" data-index="{{index}}"  bindtap="showVideoDetail" >
+	    	<view class="toutiao-img">
+	    		<image mode="aspectFill" src="{{item.pic}}"></image>
+	    	</view>
+	    	<view class="toutiao-info">
+	    		<view class="toutiao-title">{{item.title}}</view>
+	    		<view class="toutiao-desc">{{item.src}}.{{item.time}}</view>
+	    	</view>
 	    </view>
 	</scroll-view>
+	<view class="loadmore" wx:if="{{loadingMore}}">
+		<image src="/public/img/loading.png"></image>
+	</view>
+	<scroll-view class="toutiao-detail" wx:if="{{showDetail}}">
+		<view class="back" bindtap="trunBack">
+			<image src="/public/img/icon-back.png"></image>
+		</view>
+		<image mode="aspectFill" class="toutiao-imglg" src="{{detail.pic}}">
+			<view class="tt-title">{{detail.title}}</view>
+		</image>
+		<view class="tt-content">
+			<rich-text nodes="{{detail.content}}"></rich-text>
+		</view>
+	</scroll-view>
+	<div class="loader" wx:if="{{loading}}"></div>
 </view>
 
 

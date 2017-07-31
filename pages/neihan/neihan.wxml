@@ -31,34 +31,15 @@
     		<view wx:if="{{ item.group.media_type===4 }}">
     			<image class="image-item" wx:for="{{item.group.large_image_list}}" wx:key="{{item.url}}" mode="aspectFit" src="{{item.url}}" bindtap="showLargeImage" data-imgurl="{{item.url}}"></image>
     		</view>
-    		<!-- <block wx:if="{{ item.group.media_type===3 }}">
-    			<view class="video-container" bindtap="showVideo" data-videourl="{{item.groupmp4_url}}">
-    				
-    				<image class="video-cover" src="{{imgUrl+item.group.large_cover.uri}}" mode="aspectFill"></image>
-    				<view class="img-cover">
-    					<image src="/public/img/icon-play.png"></image>
-    				</view>	
-    			</view>
-    		</block> -->
-			<!-- <view class="neihan-option">
-				<view class="option-item">
-					<image src="/public/img/icon-good.png"></image>
-					{{item.group.favorite_count}}
-				</view>
-				<view class="option-item option-center">
-					<image src="/public/img/icon-comments.png"></image>
-					{{item.comments.length}}
-				</view>
-				<view class="option-item">
-					<image src="/public/img/icon-share.png"></image>
-					{{item.group.share_count}}
-				</view>
-			</view> -->
 	    </view>
 	</scroll-view>
-	<view class="fullScreen" wx:if="{{fullScreen}}">
-		<image class="largeImg" mode="aspectFit" wx:if="{{showUrl}}" src="{{showUrl}}" bindtap="hideFullScreen"></image>
+	<view class="loadmore" wx:if="{{loadingMore}}">
+		<image src="/public/img/loading.png"></image>
 	</view>
+	<scroll-view scroll-y="true" class="fullScreen" wx:if="{{fullScreen}}">
+		<image class="largeImg" mode="aspectFit" wx:if="{{showUrl}}" src="{{showUrl}}" bindtap="hideFullScreen"></image>
+	</scroll-view>
+	<div class="loader" wx:if="{{loading}}"></div>
 </view>
 
 

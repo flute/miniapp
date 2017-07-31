@@ -2,6 +2,8 @@
 
 Page({
 	data: {
+		loading: true,
+		loadingMore: false,
 		neihan: [],
 		imgUrl: 'http://p3.pstatp.com/',
 		fullScreen: false,
@@ -87,6 +89,8 @@ Page({
 		}
 		console.log(neihanArr)
 		this.setData({
+			loading: false,
+			loadingMore: false,
 			neihan: this.data.neihan.concat(neihanArr)
 		})
 	},
@@ -113,6 +117,7 @@ Page({
 		data.content_type = this.data.typeId[type]
 		console.log(data.content_type)
 		this.setData({
+			loading: true,
 			neihan: [],
 			type: type,
 			data: data
@@ -121,6 +126,9 @@ Page({
 	},
 	scrollBottom: function(){
 		console.log('scrollBottom fetch data');
+		this.setData({
+			loadingMore: true
+		})
 		var that = this;
 		wx.request({
 			url: 'https://is.snssdk.com/neihan/stream/mix/v1/',

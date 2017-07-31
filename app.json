@@ -2,11 +2,10 @@
 	"pages":[
 		"pages/toutiao/toutiao",
 		"pages/video/video",
+		"pages/video_detail/video_detail",
 		"pages/neihan/neihan",
-		
 		"pages/index/index",
-		"pages/logs/logs",
-		"pages/video_detail/video_detail"
+		"pages/logs/logs"
 	],
 	"window":{
 		"backgroundTextStyle": "light",

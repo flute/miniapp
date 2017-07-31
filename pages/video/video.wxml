@@ -7,6 +7,7 @@
 	    	<view class="video-cover"></view>
 	    </view>
 	</scroll-view>
+	<div class="loader" wx:if="{{loading}}"></div>
 </view>
 
 
