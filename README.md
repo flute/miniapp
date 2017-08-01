@@ -11,4 +11,4 @@
 
 #### 截图
 
-<img src="./screenshoot/video.gif" width = "32%" /> <img src="./screenshoot/neihan.gif" width = "33%" /> <img src="./screenshoot/neihan.gif" width = "32%" />
+<img src="./screenshoot/video.gif" width = "32%" /> <img src="./screenshoot/neihan.gif" width = "32%" /> <img src="./screenshoot/toutiao.gif" width = "32%" />
