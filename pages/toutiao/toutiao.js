@@ -1,5 +1,4 @@
 //index.js
-
 Page({
 	data: {
 		loading: true,

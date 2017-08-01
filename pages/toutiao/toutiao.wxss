@@ -1,6 +1,7 @@
 /**toutiao.wxss**/
 .toutiao-lists{
 	height: 100vh;
+	width: 100vw;
 }
 .toutiao-item{
 	display: flex;
@@ -15,13 +16,14 @@
 .toutiao-img image{
 	width: 100%;
 	height: 80px;
-	margin-right: 15rpx;
+	margin-left: 25rpx;
 }
 .toutiao-info{
 	flex: 5;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin:15rpx 0;
 }
 .toutiao-title{
 	font-size: 14px;
@@ -36,42 +38,60 @@
 .toutiao-detail{
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: -100vw;
 	width: 100%;
 	background-color: #fff;
+	height:100vh;
+	z-index:10;
+	opacity: 0;
+	transition: all 0.5s
+}
+.toutiao-detail.show{
+	right: 0;
+	opacity: 1;
 }
 .toutiao-imglg{
 	width: 100%;
 	height: 500rpx;
 }
-.tt-title{
-	width: 90%;
-	padding: 15rpx 20rpx;
-	margin-top: -40rpx;
-	box-shadow: 1px 1px 5px #eee;
-	background-color: #fff;
+image .tt-title{
+	width:85%;
+	padding:15rpx 20rpx;
+	margin-top:-40rpx;
+	box-shadow:1px 1px 5px #eee;
+	background-color:#fff;
 	position:absolute;
+	min-height:40px;
+	display:flex;
+	align-items:center;
+}
+.tt-title{
+	padding:15rpx 20rpx;
+	margin-top:40px;
+	margin-bottom:-30px;
 }
 .tt-content{
 	padding: 20rpx;
 	font-size:14px;
 	color:rgba(0,0,0,.65);
-	line-height:40rpx;
+	line-height:50rpx;
 	margin-top:60rpx;
 }
 .back{
 	position: fixed;
 	top: 15rpx;
 	left: 15rpx;
+	z-index: 100;
 }
 .back image{
-	width: 20px;
-	height: 20px;
-	background-color:rgba(255,255,255,.85);
+	width:25px;
+	height:25px;
+	background-color:#fff;
 	border-radius:3px;
 	padding:2rpx 5rpx;
+	box-shadow:0 0 5px #999;
 }
-.tt-content img{
+img{
 	max-width: 100% !important;
 }
 
