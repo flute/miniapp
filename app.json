@@ -1,11 +1,9 @@
 {
 	"pages":[
-		"pages/toutiao/toutiao",
 		"pages/video/video",
+		"pages/toutiao/toutiao",
 		"pages/video_detail/video_detail",
-		"pages/neihan/neihan",
-		"pages/index/index",
-		"pages/logs/logs"
+		"pages/neihan/neihan"
 	],
 	"window":{
 		"backgroundTextStyle": "light",

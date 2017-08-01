@@ -24,7 +24,7 @@
 		</image>
 		<view wx:if="{{!detail.pic}}" class="tt-title">{{detail.title}}</view>
 		<view class="tt-content">
-			<rich-text nodes="{{detail.content}}"></rich-text>
+			<rich-text class="html" nodes="{{detail.content}}"></rich-text>
 		</view>
 	</scroll-view>
 	<div class="loader" wx:if="{{loading}}"></div>
