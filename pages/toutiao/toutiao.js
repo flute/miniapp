@@ -1,4 +1,5 @@
-//index.js
+//toutiao.js
+var util = require('../../utils/util.js')
 Page({
 	data: {
 		loading: true,
@@ -23,8 +24,14 @@ Page({
 			url: 'https://way.jd.com/jisuapi/get',
 			data: that.data.data,
 			success: function(res) {
-				console.log(res.data.result.result.list)
-				data = data.concat(res.data.result.result.list)
+				var result = res.data.result.result.list
+				result = result.map(function(item){
+					var date = new Date(item.time).getTime()
+					item.time = util.getDateDiff(date);
+					return item;
+				})
+				
+				data = data.concat(result)
 				that.setData({
 					loading: false,
 					loadingMore: false,
